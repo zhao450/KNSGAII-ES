@@ -1,21 +1,6 @@
 # DHFSP instance with machine heterogeneity and due dates for TTD research
 [meta]
 name = comparison_experiment_small_009
-protocol = comparison_experiment_fixed_scale_machine_heterogeneous_ttd
-seed = 1141517600
-jobs = 40
-stages = 3
-factories = 3
-machines_per_stage = 5 5 5
-machines_per_stage_per_factory = 5
-machine_efficiency_range = discrete_uniform[10, 15]
-job_workload_range = uniform[100, 1000]
-processing_time_semantics = p(i,f,k,m) = workload(i) / efficiency(f,k,m)
-heterogeneity_type = machine_only
-due_date_rule = avg_cross_factory_cross_machine_workload_TR
-due_date_tightness = 0.20
-due_date_range = 0.60
-note = Comparison experiment. Fixed small scale: jobs=40, stages=3, factories=3, machines_per_stage_per_factory=5. Machine heterogeneity only; processing times follow p(i,f,k,m)=workload(i)/efficiency(f,k,m).
 
 [machine_layout]
 factory_1_stage_1 = F1S1M1 F1S1M2 F1S1M3 F1S1M4 F1S1M5
